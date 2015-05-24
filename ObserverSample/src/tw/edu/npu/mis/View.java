@@ -32,9 +32,10 @@ package tw.edu.npu.mis;
  */
 public class View {
 
-    private final String mName;
+    final String mName;
     private final Window mWindow;
-    private final Model mModel;
+    final Model mModel;
+    String viewdata;
 
     public View(String name, Window window, Model model) {
         mName = name;
@@ -53,7 +54,10 @@ public class View {
      * Show the content of the model on the console.
      */
     public void onDraw() {
-        System.out.println("View (" + mName + "): " + mModel.getData());
+        if(viewdata!=mModel.getData()){
+            System.out.println("View (" + mName + "): " + mModel.getData());
+            viewdata=mModel.getData();
+        }
     }
 
 }
