@@ -35,7 +35,7 @@ import java.util.Scanner;
 public class Controller {
 
     private final Model mModel;
-
+    //告訴輸入使用Model
     public Controller(Model model) {
         mModel = model;
     }

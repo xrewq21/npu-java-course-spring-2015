@@ -30,15 +30,15 @@ package tw.edu.npu.mis;
  * @author STP
  */
 public class AlternativeView extends View{
-
+    //繼承父類別的建構子,傳字串,window,model進來,回到父類別View執行建構子
     public AlternativeView(String name, Window window, Model model) {
         super(name, window, model);
     }
     @Override
     public void onDraw() {
-        if(viewdata!=mModel.getData()){
+        if(mViewData!=mModel.getData()){
             System.out.println("View (" + mName + "): " + new StringBuilder(mModel.getData()).reverse().toString());
-            viewdata=mModel.getData();
+            mViewData=mModel.getData();
         }
     }
 }

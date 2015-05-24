@@ -32,11 +32,11 @@ package tw.edu.npu.mis;
  */
 public class View {
 
-    final String mName;
+    protected final String mName;
     private final Window mWindow;
-    final Model mModel;
-    String viewdata;
-
+    protected final Model mModel;
+    protected String mViewData;
+    //View的建構子,字串,window,model進來,然後存起來
     public View(String name, Window window, Model model) {
         mName = name;
         mWindow = window;
@@ -54,9 +54,9 @@ public class View {
      * Show the content of the model on the console.
      */
     public void onDraw() {
-        if(viewdata!=mModel.getData()){
+        if(mViewData!=mModel.getData()){
             System.out.println("View (" + mName + "): " + mModel.getData());
-            viewdata=mModel.getData();
+            mViewData=mModel.getData();
         }
     }
 
