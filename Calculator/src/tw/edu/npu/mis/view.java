@@ -5,6 +5,11 @@
  */
 package tw.edu.npu.mis;
 
+import javax.swing.SwingConstants;
+import static javax.swing.SwingConstants.RIGHT;
+
+
+
 /**
  *
  * @author STP
@@ -44,7 +49,7 @@ public class view extends javax.swing.JFrame {
         equal = new javax.swing.JButton();
         clear = new javax.swing.JButton();
         dot = new javax.swing.JButton();
-        qoo = new javax.swing.JTextField();
+        result = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,6 +84,11 @@ public class view extends javax.swing.JFrame {
         equal.setText("=");
 
         clear.setText("c");
+        clear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clearActionPerformed(evt);
+            }
+        });
 
         dot.setText(".");
 
@@ -115,7 +125,7 @@ public class view extends javax.swing.JFrame {
                         .addComponent(add))
                     .addComponent(clear)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(qoo, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(result, javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                             .addComponent(n7)
                             .addGap(18, 18, 18)
@@ -130,7 +140,7 @@ public class view extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(qoo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(n7)
@@ -162,6 +172,11 @@ public class view extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void clearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(null);
+    }//GEN-LAST:event_clearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,6 +231,6 @@ public class view extends javax.swing.JFrame {
     private javax.swing.JButton n7;
     private javax.swing.JButton n8;
     private javax.swing.JButton n9;
-    private javax.swing.JTextField qoo;
+    private javax.swing.JTextField result;
     // End of variables declaration//GEN-END:variables
 }
