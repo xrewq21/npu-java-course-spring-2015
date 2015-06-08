@@ -4,16 +4,12 @@
  * and open the template in the editor.
  */
 package tw.edu.npu.mis;
-
-
-
-
-
 /**
  *
  * @author STP
  */
 public class view extends javax.swing.JFrame {
+    private model model;
 
     /**
      * Creates new form view
@@ -123,14 +119,39 @@ public class view extends javax.swing.JFrame {
         });
 
         add.setText("+");
+        add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addActionPerformed(evt);
+            }
+        });
 
         minus.setText("-");
+        minus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                minusActionPerformed(evt);
+            }
+        });
 
         multiply.setText("*");
+        multiply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplyActionPerformed(evt);
+            }
+        });
 
         divide.setText("/");
+        divide.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divideActionPerformed(evt);
+            }
+        });
 
         equal.setText("=");
+        equal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                equalActionPerformed(evt);
+            }
+        });
 
         clear.setText("c");
         clear.addActionListener(new java.awt.event.ActionListener() {
@@ -288,6 +309,35 @@ public class view extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.result.setText(result.getText()+"9");
     }//GEN-LAST:event_n9ActionPerformed
+
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
+        // TODO add your handling code here:
+        model.saveNumberA(Float.parseFloat(this.result.getText()),"+");
+        this.result.setText(null);
+    }//GEN-LAST:event_addActionPerformed
+
+    private void minusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minusActionPerformed
+        // TODO add your handling code here:
+        model.saveNumberA(Float.parseFloat(this.result.getText()),"-");
+        this.result.setText(null);
+    }//GEN-LAST:event_minusActionPerformed
+
+    private void multiplyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplyActionPerformed
+        // TODO add your handling code here:
+        model.saveNumberA(Float.parseFloat(this.result.getText()),"*");
+        this.result.setText(null);
+    }//GEN-LAST:event_multiplyActionPerformed
+
+    private void divideActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divideActionPerformed
+        // TODO add your handling code here:
+        model.saveNumberA(Float.parseFloat(this.result.getText()),"/");
+        this.result.setText(null);
+    }//GEN-LAST:event_divideActionPerformed
+
+    private void equalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_equalActionPerformed
+        // TODO add your handling code here:
+        this.result.setText((String) model.calculate(this.result.getText()));
+    }//GEN-LAST:event_equalActionPerformed
 
     /**
      * @param args the command line arguments
