@@ -5,8 +5,7 @@
  */
 package tw.edu.npu.mis;
 
-import javax.swing.SwingConstants;
-import static javax.swing.SwingConstants.RIGHT;
+
 
 
 
@@ -54,24 +53,74 @@ public class view extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         n1.setText("1");
+        n1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n1ActionPerformed(evt);
+            }
+        });
 
         n2.setText("2");
+        n2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n2ActionPerformed(evt);
+            }
+        });
 
         n3.setText("3");
+        n3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n3ActionPerformed(evt);
+            }
+        });
 
         n4.setText("4");
+        n4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n4ActionPerformed(evt);
+            }
+        });
 
         n5.setText("5");
+        n5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n5ActionPerformed(evt);
+            }
+        });
 
         n6.setText("6");
+        n6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n6ActionPerformed(evt);
+            }
+        });
 
         n7.setText("7");
+        n7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n7ActionPerformed(evt);
+            }
+        });
 
         n8.setText("8");
+        n8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n8ActionPerformed(evt);
+            }
+        });
 
         n9.setText("9");
+        n9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n9ActionPerformed(evt);
+            }
+        });
 
         n0.setText("0");
+        n0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                n0ActionPerformed(evt);
+            }
+        });
 
         add.setText("+");
 
@@ -91,6 +140,13 @@ public class view extends javax.swing.JFrame {
         });
 
         dot.setText(".");
+        dot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dotActionPerformed(evt);
+            }
+        });
+
+        result.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,7 +196,7 @@ public class view extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(result)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(n7)
@@ -177,6 +233,61 @@ public class view extends javax.swing.JFrame {
         // TODO add your handling code here:
         this.result.setText(null);
     }//GEN-LAST:event_clearActionPerformed
+
+    private void n0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n0ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"0");
+    }//GEN-LAST:event_n0ActionPerformed
+
+    private void dotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dotActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+".");
+    }//GEN-LAST:event_dotActionPerformed
+
+    private void n1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n1ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"1");
+    }//GEN-LAST:event_n1ActionPerformed
+
+    private void n2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n2ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"2");
+    }//GEN-LAST:event_n2ActionPerformed
+
+    private void n3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n3ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"3");
+    }//GEN-LAST:event_n3ActionPerformed
+
+    private void n4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n4ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"4");
+    }//GEN-LAST:event_n4ActionPerformed
+
+    private void n5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n5ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"5");
+    }//GEN-LAST:event_n5ActionPerformed
+
+    private void n6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n6ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"6");
+    }//GEN-LAST:event_n6ActionPerformed
+
+    private void n7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n7ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"7");
+    }//GEN-LAST:event_n7ActionPerformed
+
+    private void n8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n8ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"8");
+    }//GEN-LAST:event_n8ActionPerformed
+
+    private void n9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_n9ActionPerformed
+        // TODO add your handling code here:
+        this.result.setText(result.getText()+"9");
+    }//GEN-LAST:event_n9ActionPerformed
 
     /**
      * @param args the command line arguments
